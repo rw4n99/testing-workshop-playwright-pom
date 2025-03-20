@@ -19,6 +19,11 @@ module.exports = defineConfig({
   // The number of tests that can run in parallel
   reporter: process.env.CI ? "html" : "html",
   // How the tests will be reported, see playwright.dev reporters for more.
+
+  use: {
+    baseURL: 'https://www.gov.uk/calculate-your-holiday-entitlement',
+  },
+
   projects: [
     {
       name: "chromium",
