@@ -6,7 +6,7 @@ class LandingPage {
   private readonly startButton: string;
   constructor() {
     this.title = '.govuk-heading-xl';
-    this.startButton = 'text=Start now'; // Targeting the button by visible text
+    this.startButton = 'text=Start now';
   }
 
   async checkPageLoads(page: Page): Promise<void> {

@@ -6,11 +6,7 @@ test(`Page object model happy path for second test`, async ({ page }): Promise<v
     const landingPage: LandingPage = new LandingPage();
     await landingPage.checkPageLoads(page);
     await landingPage.continueOn(page);
-
-    // const hoursPage: HoursPage = new HoursPage();
-    // await hoursPage.checkPageLoads(page);
     // Continue here!
-    //dfghjk
 });
 
 test(`Page object model happy path for third test`, async ({ page }): Promise<void> => {
@@ -20,5 +16,5 @@ test(`Page object model happy path for third test`, async ({ page }): Promise<vo
     await hoursPage.checkYes(page);
     await hoursPage.continueOn(page);
     // Continue here!
-    //dfghjk
 });
+
