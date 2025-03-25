@@ -8,6 +8,7 @@ import InformationPage from "./pages/informationPage";
 // Main test - heppy, should work 
 test(`Page object model happy path for Landing Page Test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
+    await page.pause();
     await landingPage.checkPageLoads(page);
     await landingPage.continueOn(page);
 
