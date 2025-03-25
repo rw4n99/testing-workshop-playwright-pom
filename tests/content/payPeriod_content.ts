@@ -1,6 +1,6 @@
-const payPeriod_content = {
+const PayPeriod_content = {
     pageTitle: "How many hours has the employee worked in the pay period?",
     // Continue here!
 } as const;
 
-export default payPeriod_content
+export default PayPeriod_content

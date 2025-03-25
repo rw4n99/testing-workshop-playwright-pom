@@ -1,5 +1,5 @@
 import { Page, expect } from '@playwright/test';
-import payPeriod_content from '../content/payPeriod_content'
+import PayPeriod_content from '../content/payPeriod_content'
 
 class payPeriod {
   private readonly title: string;
@@ -7,14 +7,14 @@ class payPeriod {
     
 
   constructor() {
-    this.title = '.govuk-fieldset__heading';
+    this.title = 'h1.govuk-label-wrapper';
     this.inputHours = '.gem-c-input'
   }
 
   async checkPageLoads(page: Page): Promise<void> {
     await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement/y/irregular-hours-and-part-year/2025-02-01');
     await Promise.all([
-      expect(page.locator(this.title)).toHaveText(payPeriod_content.pageTitle),
+      expect(page.locator(this.title)).toHaveText(PayPeriod_content.pageTitle),
     ]);
   }
   
