@@ -3,6 +3,7 @@ import LandingPage from "./pages/landingPage";
 import HoursPage from "./pages/hoursPage";
 import LeaveYearPage from "./pages/leaveYearPage";
 import PayPeriod from "./pages/payPeriod";
+import InformationPage from "./pages/informationPage";
 
 test(`Page object model happy path for Landing Page Test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
@@ -32,4 +33,10 @@ test(`Page object model happy path for Pay Period test`, async ({ page }): Promi
     await payPeriod.checkPageLoads(page);
     await payPeriod.enterDate(page);
     await payPeriod.continueOn(page);
+});
+
+test(`Page object model happy path for Information Page test`, async ({ page }): Promise<void> => {
+
+    const informationPage: InformationPage = new InformationPage();
+    await informationPage.checkPageLoads(page);
 });
