@@ -21,7 +21,9 @@ class HoursPage {
   }
   
   async checkYes(page: Page): Promise<void> {
-   await page.click(this.checkButton);
+    await page.getByLabel('Yes').check();
+    await expect(page.getByLabel('Yes')).toBeChecked();
+    
   }
 //   async continueOn(page: Page): Promise<void> {
 //     await page.click(this.startButton);
