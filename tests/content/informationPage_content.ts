@@ -1,6 +1,6 @@
 const informationPage_content = {
     pageTitle: "Calculate holiday entitlement:",
-    // Continue here!
+    calculation: "The statutory entitlement for this pay period is 5 hours.",
 } as const;
 
 export default informationPage_content

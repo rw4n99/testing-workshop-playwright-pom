@@ -10,6 +10,7 @@ class startPage {
     this.startButton = 'text=Start now'; 
   }
 
+  // Verifies that the page loads and has correct title
   async checkPageLoads(page: Page): Promise<void> {
     await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement');
 
@@ -19,6 +20,7 @@ class startPage {
     ]);
   }
 
+  // Checks that the Continue button is clicked
   async continueOn(page: Page): Promise<void> {
     await page.click(this.startButton);
   }

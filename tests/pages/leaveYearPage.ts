@@ -11,12 +11,14 @@ class LeaveYearPage {
     this.inputDay = '.gem-c-input'
   }
 
+  // Verifies that the page loads and has correct title
   async checkPageLoads(page: Page): Promise<void> {
     await Promise.all([
       expect(page.locator(this.title)).toHaveText(LeaveYearPage_content.pageTitle),
     ]);
   }
   
+  // Enters a date into the input fields
   async enterDate(page: Page): Promise<void> {
 
     await page.getByLabel("Day").fill("01"),
@@ -29,6 +31,7 @@ class LeaveYearPage {
     ])
   }
 
+  //Checks that the Continue button is clicked and the URL is correct
   async continueOn(page: Page): Promise<void> {
     await page.getByRole('button', { name: 'Continue' }).click();
     await expect(page).toHaveURL('https://www.gov.uk/calculate-your-holiday-entitlement/y/irregular-hours-and-part-year/2025-02-01')
@@ -36,5 +39,3 @@ class LeaveYearPage {
 
 }
 export default LeaveYearPage;
-
-//01/02/2025
