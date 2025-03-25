@@ -11,7 +11,6 @@ class HoursPage {
   }
 
   async checkPageLoads(page: Page): Promise<void> {
-    await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement/y');
     await Promise.all([
       expect(page.locator(this.title)).toHaveText(HoursPage_content.pageTitle),
     ]);

@@ -11,7 +11,6 @@ class payPeriod {
   }
 
   async checkPageLoads(page: Page): Promise<void> {
-    await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement/y/irregular-hours-and-part-year/2025-02-01');
     await expect(page.locator(this.title)).toHaveText(PayPeriod_content.pageTitle);
   }
 

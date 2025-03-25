@@ -12,7 +12,6 @@ class LeaveYearPage {
   }
 
   async checkPageLoads(page: Page): Promise<void> {
-    await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement/y/irregular-hours-and-part-year');
     await Promise.all([
       expect(page.locator(this.title)).toHaveText(LeaveYearPage_content.pageTitle),
     ]);
