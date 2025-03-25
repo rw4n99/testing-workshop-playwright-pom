@@ -25,9 +25,10 @@ class HoursPage {
     await expect(page.getByLabel('Yes')).toBeChecked();
     
   }
-//   async continueOn(page: Page): Promise<void> {
-//     await page.click(this.startButton);
-//   }
+  async continueOn(page: Page): Promise<void> {
+    await page.getByRole('button', { name: 'Continue' }).click();
+  }
+  
 }
 export default HoursPage;
 

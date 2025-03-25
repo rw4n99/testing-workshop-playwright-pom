@@ -18,6 +18,7 @@ test(`Page object model happy path for third test`, async ({ page }): Promise<vo
     const hoursPage: HoursPage = new HoursPage();
     await hoursPage.checkPageLoads(page);
     await hoursPage.checkYes(page);
+    await hoursPage.continueOn(page);
     // Continue here!
     //dfghjk
 });
