@@ -3,10 +3,12 @@ import HoursPage_content from '../content/hoursPage_content';
 
 class HoursPage {
   private readonly title: string;
+  private readonly checkButton: string;
 //   private readonly startButton: string;
 
   constructor() {
     this.title = '.govuk-fieldset__heading';
+    this.checkButton = 'text=Yes ';
     // this.startButton = 'text=Start now'; // Targeting the button by visible text
   }
 
@@ -18,6 +20,9 @@ class HoursPage {
     ]);
   }
   
+  async checkYes(page: Page): Promise<void> {
+   await page.click(this.checkButton);
+  }
 //   async continueOn(page: Page): Promise<void> {
 //     await page.click(this.startButton);
 //   }
