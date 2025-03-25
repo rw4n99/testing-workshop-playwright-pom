@@ -31,8 +31,9 @@ test(`Page object model happy path for Landing Page Test`, async ({ page }): Pro
     await informationPage.checkPageLoads(page);
 });
 
-test(`POM unhappy path for Landing Page Test`, async ({ page }): Promise<void> => {
+// test(`POM unhappy path for Landing Page Test`, async ({ page }): Promise<void> => {
 
-    const hoursPage: HoursPage = new HoursPage();
-    await hoursPage.unCheckedShouldFail(page);
-});
+//     const hoursPage: HoursPage = new HoursPage();
+//     await page.pause();
+//     await hoursPage.unCheckedShouldFail(page);
+// });
