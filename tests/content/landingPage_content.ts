@@ -1,6 +1,6 @@
-const landingPage_content = {
+const startPage_content = {
     pageTitle: "Calculate holiday entitlement",
     // Continue here!
 } as const;
 
-export default landingPage_content
+export default startPage_content
