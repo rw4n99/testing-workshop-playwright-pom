@@ -32,6 +32,13 @@ class HoursPage {
     await page.getByRole('button', { name: 'Continue' }).click();
     await expect(page).toHaveURL('https://www.gov.uk/calculate-your-holiday-entitlement/y/irregular-hours-and-part-year')
   }
-  
+
+  async unCheckedShouldFail(page: Page): Promise<void> {
+    await page.goto('https://www.gov.uk/calculate-your-holiday-entitlement/y');
+    await page.getByRole('button', { name: 'Continue' }).click();
+    await expect(page.locator(".govuk-error-message")).toBeVisible()
+  }
+
 }
+
 export default HoursPage;

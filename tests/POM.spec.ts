@@ -5,6 +5,7 @@ import LeaveYearPage from "./pages/leaveYearPage";
 import PayPeriod from "./pages/payPeriod";
 import InformationPage from "./pages/informationPage";
 
+// Main test - heppy, should work 
 test(`Page object model happy path for Landing Page Test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
     await landingPage.checkPageLoads(page);
@@ -27,4 +28,10 @@ test(`Page object model happy path for Landing Page Test`, async ({ page }): Pro
 
     const informationPage: InformationPage = new InformationPage();
     await informationPage.checkPageLoads(page);
+});
+
+test(`POM unhappy path for Landing Page Test`, async ({ page }): Promise<void> => {
+
+    const hoursPage: HoursPage = new HoursPage();
+    await hoursPage.unCheckedShouldFail(page);
 });
